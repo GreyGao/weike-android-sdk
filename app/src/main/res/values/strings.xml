@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">微课录制demo</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="reverse_level">水平反转</string>
+    <string name="tile">平铺</string>
+    <string name="vertical_inversion">垂直反转</string>
+    <string name="merage_video_fail">合并视频失败</string>
+
+    <string name="drag_pic">拖拽、缩放或旋转把图片放置在合适位置</string>
+    <string name="place_pic">放置图片</string>
+    <string name="save_str">保存</string>
+    <string name="demo_app_name">笔声微课demo</string>
+    <string name="merge_white_board_error">合并白板错误</string>
+    <string name="save_whiteboard_error">保存白板错误</string>
+</resources>

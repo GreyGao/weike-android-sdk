@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <com.abc.recorderdemo.ui.WeiKeExpandableButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/al_pen"
+        app:aebAnimDurationMillis="175"
+        app:aebBlurBackground="false"
+        app:aebButtonGapDp="5dp"
+        app:aebEndAngleDegree="180"
+        app:aebIsSelectionMode="false"
+        app:aebMainButtonRotateAnimDurationMillis="300"
+        app:aebMainButtonRotateDegree="0"
+        app:aebMainButtonSizeDp="33dp"
+        app:aebRippleEffect="true"
+        app:aebStartAngleDegree="180"
+        app:aebSubButtonSizeDp="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.abc.recorderdemo.ui.WeiKeExpandableButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/al_size"
+        app:aebAnimDurationMillis="175"
+        app:aebBlurBackground="false"
+        app:aebButtonGapDp="5dp"
+        app:aebEndAngleDegree="180"
+        app:aebIsSelectionMode="false"
+        app:aebMainButtonRotateAnimDurationMillis="300"
+        app:aebMainButtonRotateDegree="-45"
+        app:aebMainButtonSizeDp="33dp"
+        app:aebRippleEffect="true"
+        app:aebStartAngleDegree="180"
+        app:aebSubButtonSizeDp="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.abc.recorderdemo.ui.WeiKeExpandableButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/al_color"
+        app:aebAnimDurationMillis="175"
+        app:aebBlurBackground="false"
+        app:aebButtonGapDp="5dp"
+        app:aebEndAngleDegree="180"
+        app:aebIsSelectionMode="false"
+        app:aebMainButtonRotateAnimDurationMillis="300"
+        app:aebMainButtonRotateDegree="-45"
+        app:aebMainButtonSizeDp="33dp"
+        app:aebRippleEffect="true"
+        app:aebStartAngleDegree="180"
+        app:aebSubButtonSizeDp="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.abc.recorderdemo.ui.WeiKeExpandableButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/al_eraser"
+        app:aebAnimDurationMillis="175"
+        app:aebBlurBackground="false"
+        app:aebButtonGapDp="5dp"
+        app:aebEndAngleDegree="180"
+        app:aebIsSelectionMode="false"
+        app:aebMainButtonRotateAnimDurationMillis="300"
+        app:aebMainButtonRotateDegree="0"
+        app:aebMainButtonSizeDp="33dp"
+        app:aebRippleEffect="true"
+        app:aebStartAngleDegree="180"
+        app:aebSubButtonSizeDp="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.abc.recorderdemo.ui.WeiKeExpandableButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/al_del"
+        app:aebAnimDurationMillis="175"
+        app:aebBlurBackground="false"
+        app:aebButtonGapDp="5dp"
+        app:aebEndAngleDegree="180"
+        app:aebIsSelectionMode="false"
+        app:aebMainButtonRotateAnimDurationMillis="300"
+        app:aebMainButtonRotateDegree="0"
+        app:aebMainButtonSizeDp="33dp"
+        app:aebRippleEffect="true"
+        app:aebStartAngleDegree="180"
+        app:aebSubButtonSizeDp="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.abc.recorderdemo.ui.WeiKeExpandableButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/al_add"
+        app:aebAnimDurationMillis="175"
+        app:aebBlurBackground="false"
+        app:aebButtonGapDp="5dp"
+        app:aebEndAngleDegree="180"
+        app:aebIsSelectionMode="false"
+        app:aebMainButtonRotateAnimDurationMillis="300"
+        app:aebMainButtonRotateDegree="-45"
+        app:aebMainButtonSizeDp="33dp"
+        app:aebRippleEffect="true"
+        app:aebStartAngleDegree="180"
+        app:aebSubButtonSizeDp="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

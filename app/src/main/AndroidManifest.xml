@@ -1,0 +1,54 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.abc.recorderdemo">
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/demo_app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label,android:icon,android:theme">
+
+        <activity
+            android:name=".SimpleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".WeikeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Weike_NoActionBar"></activity>
+        <activity
+            android:name=".VideoManageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Weike_NoActionBar"></activity>
+
+        <!-- must add provider for android 7.0 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.abc.recorderdemo.ABCPenFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/camera_path" />
+        </provider>
+        <intent-filter>
+            <action android:name="android.intent.action.PACKAGE_REMOVED" />
+            <data android:scheme="package" />
+        </intent-filter>
+        <!-- 可选filter -->
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+            <action android:name="android.intent.action.USER_PRESENT" />
+        </intent-filter>
+    </application>
+</manifest>

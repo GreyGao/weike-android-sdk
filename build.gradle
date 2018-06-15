@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        maven {
+            url PUBLIC_PUSH_URL
+        }
+        maven { url "https://jitpack.io" }
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url PUBLIC_PUSH_URL
+        }
+        maven { url "https://jitpack.io" }
+        google()
+        jcenter()
+    }
+}
+
+
+ext {
+    targetSdkVersion = 26
+    minSdkVersion = 19
+    compileSdkVersion = 26
+    buildToolsVersion = "26.0.2"
+    supportVersion = "26.0.2"
+    v7_view = "26.0.2"
+    version_sdk = '1.6.0'
+    DB_NAME = "abcpen"
+    version_code = 102
+    im_version = "1.0.6"
+    version_name = "2.0.0"
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

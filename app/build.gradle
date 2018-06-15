@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.version_code
+        versionName rootProject.ext.version_name
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = true
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi-v7a'
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/maven/commons-io/commons-io/pom.xml'
+        exclude 'META-INF/maven/commons-io/commons-io/pom.properties'
+        exclude 'lib/armeabi-v7a/libavcodec.so'
+        exclude 'lib/armeabi-v7a/libavdevice.so'
+        exclude 'lib/armeabi-v7a/libavfilter.so'
+        exclude 'lib/armeabi-v7a/libavformat.so'
+        exclude 'lib/armeabi-v7a/libavutil.so'
+        exclude 'lib/armeabi-v7a/libjniavcodec.so'
+        exclude 'lib/armeabi-v7a/libjniavdevice.so'
+        exclude 'lib/armeabi-v7a/libjniavformat.so'
+        exclude 'lib/armeabi-v7a/libjniavutil.so'
+        exclude 'lib/armeabi-v7a/libjniavfilter.so'
+        exclude 'lib/armeabi-v7a/libjnipostproc.so'
+        exclude 'lib/armeabi-v7a/libjniswresample.so'
+        exclude 'lib/armeabi-v7a/libjniswscale.so'
+        exclude 'lib/armeabi-v7a/libpostproc.so'
+        exclude 'lib/armeabi-v7a/libswresample.so'
+        exclude 'lib/armeabi-v7a/libswscale.so'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.abcpen:open_wb_record:2.0.0"
+    compile 'com.android.support:multidex:1.0.1'
+    //noinspection GradleCompatible
+    compile "com.android.support:recyclerview-v7:${rootProject.ext.supportVersion}"
+    compile "com.android.support:appcompat-v7:${rootProject.ext.supportVersion}"
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'org.greenrobot:greendao:3.2.2'
+}
